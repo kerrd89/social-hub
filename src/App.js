@@ -6,6 +6,7 @@ import './App.css';
 
 import tweets from '../mockData/tweets.js';
 import instagrams from '../mockData/instagrams.js';
+import blogPosts from '../mockData/blogPosts.js';
 
 import Header from './containers/Header';
 import Profile from './containers/Profile';
@@ -30,8 +31,8 @@ class App extends Component {
     let { user, uid } = this.state;
     return (
         <div className="App">
-          <Header user={user} signOut={signOut} googleAuthProvider={signIn}/>
-          {uid && <Profile uid={uid} tweets={tweets} instagrams={instagrams} />}
+          <Header user={user} signOut={signOut} googleAuthProvider={signIn} uid={uid}/>
+          {uid && <Profile uid={uid} tweets={tweets} instagrams={instagrams} blogs={blogPosts} />}
         </div>
     );
   }

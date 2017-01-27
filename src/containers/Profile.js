@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-
+import { shuffle } from 'lodash';
 import '../styles/Profile.css';
 
 import Tweet from '../components/Tweet';
 import IgImg from '../components/IgImg';
 import IgVideo from '../components/IgVideo';
+import MediumPost from '../components/MediumPost';
 
 class Profile extends Component {
   constructor(props) {
@@ -13,12 +13,6 @@ class Profile extends Component {
     this.state = {
       data: null
     };
-  }
-  retrieveContent(uid, endpoint) {
-    //endpoint does not exist yet
-    axios.get(`/${uid}/${endpoint}`)
-      .then(r => console.log(r))
-      .catch(error => console.log(error));
   }
   renderTweets(tweets) {
     return tweets.map(tweet => <Tweet tweet={tweet} key={tweet.id}/>);
@@ -33,16 +27,24 @@ class Profile extends Component {
       }
     });
   }
+  renderMedium(blogs) {
+    return blogs.map(blog => {
+      return <MediumPost post={blog} key={blog.created_at} />
+    })
+  }
   render() {
-    let { tweets, uid, instagrams } = this.props;
+    let { tweets, uid, instagrams, blogs } = this.props;
+
     let tweetsHTML = this.renderTweets(tweets)
     let instagramsHTML = this.renderIntragrams(instagrams);
+    let blogPostsHTML = this.renderMedium(blogs);
+
+    let content = shuffle(tweetsHTML.concat(instagramsHTML, blogPostsHTML))
+
     return (
       <div>
-        <p>{uid}</p>
         <ul className="Profile">
-          {tweetsHTML && tweetsHTML}
-          {instagramsHTML}
+          {content && content}
         </ul>
       </div>
     )
