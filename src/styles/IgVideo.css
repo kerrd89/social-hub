@@ -1,0 +1,38 @@
+.IgVideo {
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  margin: 10px auto;
+  padding: 2%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  width: 96%;
+}
+
+.IgVideo:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.IgVideo-header {
+  display: flex;
+  flex-direction: row;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.IgVideo-header p {
+  margin: 5px;
+  display: inline;
+}
+
+.IgVideo-header a {
+  display: flex;
+  flex-direction: row;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.IgVideo iframe {
+  width: 96%;
+  margin: 10px 2%;
+}

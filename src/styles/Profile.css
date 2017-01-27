@@ -1,0 +1,12 @@
+.Profile {
+  column-width: 320px;
+	column-gap: 15px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 750px) {
+  .Profile {
+    column-gap: 5px;
+    column-width: 300px;
+  }
+}

@@ -1,0 +1,37 @@
+.IgImg {
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  margin: 10px auto;
+  padding: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.IgImg:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.IgImg-header {
+  display: flex;
+  flex-direction: row;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.IgImg-header p {
+  margin: 5px;
+  display: inline;
+}
+
+.IgImg-header a {
+  display: flex;
+  flex-direction: row;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.IgImg img {
+  width: 96%;
+  margin: 10px 2%;
+}
