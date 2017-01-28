@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import firebase, { signIn, signOut } from './firebase.js';
+import axios from 'axios';
 
 import './styles/reset.css';
 import './App.css';
@@ -26,6 +27,9 @@ class App extends Component {
     if (this.props.params.uid) {
       this.setState({ uid: this.props.params.uid });
     }
+    axios.get('https://medium.com/feed/@dkerrious')
+    .then(r=>console.log(r))
+    .catch(err=>console.log(err));
   }
   render() {
     let { user, uid } = this.state;

@@ -4,6 +4,43 @@
   padding: 10px;
 }
 
+.Owner-info {
+  background: #fff;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  -ms-align-items: center;
+  align-items: center;
+  margin-top: 10px;
+  padding: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.Owner-info h1 {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.Owner-links {
+  display: flex;
+  flex-direction: row;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.Owner-links svg {
+  margin: 0px 10px;
+}
+
+.UserPhoto {
+  border-radius: 50%;
+  clear: right;
+  display: block;
+  height: 50px;
+  width: 50px;
+}
+
 @media screen and (max-width: 750px) {
   .Profile {
     column-gap: 5px;

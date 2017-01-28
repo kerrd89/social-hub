@@ -7,6 +7,10 @@ import IgImg from '../components/IgImg';
 import IgVideo from '../components/IgVideo';
 import MediumPost from '../components/MediumPost';
 
+import TwitterSvg from '../components/TwitterSvg';
+import IgSvg from '../components/IgSvg';
+import MediumSvg from '../components/MediumSvg';
+
 class Profile extends Component {
   constructor(props) {
     super();
@@ -43,6 +47,19 @@ class Profile extends Component {
 
     return (
       <div>
+        <div className="Owner-info">
+          <div className="Owner-links">
+            <img src={tweets[0].user.profile_image_url_https}  alt="user profile picture"
+              className="UserPhoto"
+            />
+            <h1>{tweets[0].user.name}</h1>
+          </div>
+          <div className="Owner-links">
+            {tweets && <TwitterSvg width="36px" height="30px"/>}
+            {instagrams && <IgSvg width="30px" height="30px"/>}
+            {blogs && <MediumSvg width="36px" height="30px"/>}
+          </div>
+        </div>
         <ul className="Profile">
           {content && content}
         </ul>
