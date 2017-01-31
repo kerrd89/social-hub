@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import firebase, { signIn, signOut } from './firebase.js';
-import axios from 'axios';
 
 import './styles/reset.css';
 import './App.css';
@@ -11,6 +10,7 @@ import blogPosts from '../mockData/blogPosts.js';
 
 import Header from './containers/Header';
 import Profile from './containers/Profile';
+import Landing from './containers/Landing';
 
 class App extends Component {
   constructor(props) {
@@ -27,9 +27,6 @@ class App extends Component {
     if (this.props.params.uid) {
       this.setState({ uid: this.props.params.uid });
     }
-    axios.get('https://medium.com/feed/@dkerrious')
-    .then(r=>console.log(r))
-    .catch(err=>console.log(err));
   }
   render() {
     let { user, uid } = this.state;
@@ -37,6 +34,7 @@ class App extends Component {
         <div className="App">
           <Header user={user} signOut={signOut} googleAuthProvider={signIn} uid={uid}/>
           {uid && <Profile uid={uid} tweets={tweets} instagrams={instagrams} blogs={blogPosts} />}
+          {!uid && <Landing />}
         </div>
     );
   }
