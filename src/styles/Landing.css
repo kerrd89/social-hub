@@ -3,7 +3,7 @@
   width: 80vw;
   padding: 10vh 10vw;
   background: linear-gradient(213deg, #3b5998, #55acee, #02b875);
-  background-size: 400% 400%;
+  background-size: 450% 450%;
   min-height: 400px;
 
 -webkit-animation: AnimationName 30s ease infinite;
@@ -13,10 +13,9 @@ animation: AnimationName 30s ease infinite;
 
 .Landing-background h2 {
   color: #222;
-  font-weight: lighter;
   letter-spacing: .6px;
-  font-size: 30px;
-  line-height: 30px;
+  font-size: 35px;
+  line-height: 35px;
   max-width: 500px;
 }
 
