@@ -3,8 +3,8 @@ import React from 'react';
 const FeatureTwoIcon = () => {
   return (
     <svg height="110px" viewBox="0 0 110 110" width="110px">
-      <g id="Artboard"/>
-      <g id="Multicolor">
+      <g />
+      <g >
         <circle cx="55" cy="55" r="55" fill="#E04F5F"/>
         <g>
           <path d="M23,26.84c0-2.121,1.719-3.84,3.84-3.84H55l16,13.44v46.72c0,2.121-1.719,3.84-3.84,3.84H26.84    C24.719,87,23,85.281,23,83.16V26.84z" fill="#FFFFFF"/>

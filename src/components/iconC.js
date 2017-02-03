@@ -3,8 +3,8 @@ import React from 'react';
 const FeatureThreeIcon = () => {
   return (
     <svg height="110px" viewBox="0 0 110 110" width="110px">
-      <g id="Artboard"/>
-      <g id="Multicolor">
+      <g />
+      <g >
         <circle cx="55" cy="55" r="55" fill="#32BEA6"/>
         <g>
           <rect height="60" fill="#FFFFFF" width="50" x="37" y="27"/>

@@ -1,18 +1,18 @@
 import React from 'react';
-import '../styles/Header.css';
+import '../styles/Footer.css';
 import Logo from '../components/Logo';
 
-const Header = ({ user, signOut, googleAuthProvider, uid }) => {
+const Footer = ({ user, signOut, googleAuthProvider, uid }) => {
   if (user) {
     return (
-      <header className="Header">
+      <header className="Footer">
         <Logo />
         <button onClick={()=>signOut()}>Sign Out</button>
       </header>
     );
   } else {
     return (
-      <header className="Header">
+      <header className="Footer">
         <Logo />
         <button onClick={()=>googleAuthProvider()}>Login with Google</button>
       </header>
@@ -20,4 +20,4 @@ const Header = ({ user, signOut, googleAuthProvider, uid }) => {
   }
 }
 
-export default Header;
+export default Footer;

@@ -1,11 +1,10 @@
 .Landing-background {
-  height: 40vh;
+  height: 30vh;
   width: 80vw;
-  padding: 10vh 10vw;
+  padding: 5vh 10vw 10vh 10vw;
   background: linear-gradient(213deg, #3b5998, #55acee, #02b875);
   background-size: 450% 450%;
-  min-height: 400px;
-
+  min-height: 300px;
 -webkit-animation: AnimationName 30s ease infinite;
 -moz-animation: AnimationName 30s ease infinite;
 animation: AnimationName 30s ease infinite;

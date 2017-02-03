@@ -26,14 +26,14 @@ const Landing = () => {
           <div className="icon">
             <FeatureTwoIcon />
           </div>
-          <h3>Just select the accounts you want to link</h3>
+          <h3>Select the accounts you want to link</h3>
           <p>Once accounts are linked, we can periodically sync data and make you your own page</p>
         </div>
         <div className="feature">
           <div className="icon">
             <FeatureThreeIcon />
           </div>
-          <h3>Social media trends</h3>
+          <h3>See analysis about views and popularity</h3>
           <p>See stats about how many views your posts received</p>
         </div>
       </div>
