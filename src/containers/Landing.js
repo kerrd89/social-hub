@@ -34,7 +34,7 @@ const Landing = () => {
             <FeatureThreeIcon />
           </div>
           <h3>See analysis about views and popularity</h3>
-          <p>See stats about how many views your posts received</p>
+          <p>With all your stuff in one place, we can keep statistics of how you are doing over time</p>
         </div>
       </div>
     </div>

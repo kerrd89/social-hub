@@ -7,14 +7,16 @@ const Header = ({ user, signOut, googleAuthProvider, uid }) => {
     return (
       <header className="Header">
         <Logo />
-        <button onClick={()=>signOut()}>Sign Out</button>
+        <button onClick={()=>signOut()}>Log Out</button>
       </header>
     );
   } else {
     return (
       <header className="Header">
         <Logo />
-        <button onClick={()=>googleAuthProvider()}>Login with Google</button>
+        <div>
+          <button onClick={()=>googleAuthProvider()}>Login with Google</button>  
+        </div>
       </header>
     )
   }

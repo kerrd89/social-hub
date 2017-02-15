@@ -2,22 +2,16 @@ import React from 'react';
 import '../styles/Footer.css';
 import Logo from '../components/Logo';
 
-const Footer = ({ user, signOut, googleAuthProvider, uid }) => {
-  if (user) {
-    return (
-      <header className="Footer">
-        <Logo />
-        <button onClick={()=>signOut()}>Sign Out</button>
-      </header>
-    );
-  } else {
-    return (
-      <header className="Footer">
-        <Logo />
-        <button onClick={()=>googleAuthProvider()}>Login with Google</button>
-      </header>
-    )
-  }
+const Footer = () => {
+  return (
+      <div className="Footer">
+        <div className="Footer-column">Column A</div>
+        <div className="Footer-column">Column B</div>
+        <div className="Footer-column">
+          <p>Column C</p>
+          <ul><li>Contact</li></ul>
+        </div>
+      </div>
+  );
 }
-
 export default Footer;

@@ -9,6 +9,7 @@ import instagrams from '../mockData/instagrams.js';
 import blogPosts from '../mockData/blogPosts.js';
 
 import Header from './containers/Header';
+import Footer from './containers/Footer';
 import Profile from './containers/Profile';
 import Landing from './containers/Landing';
 
@@ -29,12 +30,14 @@ class App extends Component {
     }
   }
   render() {
+    console.log(this.state.user);
     let { user, uid } = this.state;
     return (
         <div className="App">
-          <Header user={user} signOut={signOut} googleAuthProvider={signIn} uid={uid}/>
+          <Header user={user} signOut={signOut} googleAuthProvider={signIn} uid={uid} />
           {uid && <Profile uid={uid} tweets={tweets} instagrams={instagrams} blogs={blogPosts} />}
           {!uid && <Landing />}
+          <Footer />
         </div>
     );
   }
