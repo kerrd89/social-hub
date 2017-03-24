@@ -11,7 +11,7 @@ const MediumPost = ({ post }) => {
           <MediumSvg width="36px" height="30px"/>
           <p>{post.user}</p>
         </a>
-        <span>{moment(parseInt(post.created_at)).format("lll")}</span>
+        <span>{moment(parseInt(post.created_at, 10)).format("lll")}</span>
       </div>
       <img src={post.image} alt={post.title} />
       <p>{post.title}</p>
@@ -20,4 +20,4 @@ const MediumPost = ({ post }) => {
   );
 }
 
-export default MediumPost;
+export default MediumPost

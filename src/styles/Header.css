@@ -19,7 +19,7 @@ header button {
   padding: 10px;
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   height: 50px;
-  margin: auto 0px;
+  margin: auto 5px;
 }
 
 header button:hover {

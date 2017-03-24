@@ -5,13 +5,13 @@ import FeatureOneIcon from '../components/iconA.js';
 import FeatureTwoIcon from '../components/iconB.js';
 import FeatureThreeIcon from '../components/iconC.js';
 
-const Landing = () => {
+const Landing = ({ signUp }) => {
   return (
     <div className="Landing">
       <div className="Landing-background">
         <h2>All of your social media, one page.</h2>
         <p>With new social media platforms popping up daily, make it easy for people to follow you across all platforms.</p>
-        <button>Sign Up, Its Free!</button>
+        <button onClick={()=>signUp()}>Sign Up, Its Free!</button>
         <LandingSvgs />
       </div>
       <div className="features">

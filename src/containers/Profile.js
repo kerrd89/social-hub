@@ -37,7 +37,7 @@ class Profile extends Component {
     })
   }
   render() {
-    let { tweets, uid, instagrams, blogs } = this.props;
+    let { tweets, instagrams, blogs } = this.props;
 
     let tweetsHTML = this.renderTweets(tweets)
     let instagramsHTML = this.renderIntragrams(instagrams);
@@ -49,7 +49,7 @@ class Profile extends Component {
       <div>
         <div className="Owner-info">
           <div className="Owner-links">
-            <img src={tweets[0].user.profile_image_url_https}  alt="user profile picture"
+            <img src={tweets[0].user.profile_image_url_https}  alt="user profile"
               className="UserPhoto"
             />
             <h1>{tweets[0].user.name}</h1>
